@@ -18,15 +18,16 @@ public class PrimaryData {
                     continue;
                 else if (count != -1)
                     data.add(new Data(line));
-                else
+                else if (line.matches("\\d+"))
                     count = Integer.parseInt(line);
+                else throw new CustomValidationException("First line can`t be parsed since it does not contain not only numbers.");
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        if (count == -1)
-            throw new RuntimeException("");
+        if (count < 0)
+            throw new CustomValidationException("Incorrect parameters");
     }
 
     public int getCount() {
