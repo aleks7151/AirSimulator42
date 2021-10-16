@@ -3,13 +3,15 @@ package simulator;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class PrimaryData {
-    private List<Data> data;
+    private final List<Data> data;
     private int count = -1;
 
     public PrimaryData(String path) {
+        data = new ArrayList<>();
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(path))) {
             String line;
             while ((line = bufferedReader.readLine()) != null) {
