@@ -25,7 +25,7 @@ public class Coordinates {
 
     @Override
     public String toString() {
-        return  "longitude=" + longitude +
+        return "longitude=" + longitude +
                 ", latitude=" + latitude +
                 ", height=" + height;
     }

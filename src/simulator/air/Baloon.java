@@ -5,11 +5,12 @@ import simulator.WeatherTower;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Baloon extends AirCraft implements Flyable{
+public class Baloon extends AirCraft implements Flyable {
     private WeatherTower weatherTower;
 
     final private static Map<String, Coordinates> SHIFTS = new HashMap<>();
     final private static Map<String, String> PHRASES = new HashMap<>();
+
     static {
         SHIFTS.put("SUN", new Coordinates(2, 0, 4));
         SHIFTS.put("RAIN", new Coordinates(0, 0, -5));
@@ -19,7 +20,7 @@ public class Baloon extends AirCraft implements Flyable{
         PHRASES.put("SUN", "Let's enjoy the good weather and take some pics.");
         PHRASES.put("RAIN", "It's raining. Better watch out for lighting.");
         PHRASES.put("FOG", "It's fogging. I can't see anything.");
-        PHRASES.put("SNOW", "It's snowing. We're gonna crash." );
+        PHRASES.put("SNOW", "It's snowing. We're gonna crash.");
     }
 
     Baloon(String name, Coordinates coordinates) {

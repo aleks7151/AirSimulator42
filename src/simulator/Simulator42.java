@@ -9,10 +9,6 @@ import java.io.PrintStream;
 
 public class Simulator42 {
     public static void main(String[] args) {
-        //https://github.com/ssoraka/avaj-launcher/tree/master/src/main/java/ex
-        //https://projects.intra.42.fr/uploads/document/document/2600/avaj_uml.png
-        //https://cdn.intra.42.fr/pdf/pdf/16891/en.subject.pdf
-        //https://projects.intra.42.fr/uploads/document/document/2601/scenario.txt
         if (args.length != 1)
             throw new ArgumentException("The number of arguments must be one. The number of arguments is " + args.length + ".");
         PrimaryData primaryData = new PrimaryData(args[0]);

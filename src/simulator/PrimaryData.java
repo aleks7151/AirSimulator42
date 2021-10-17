@@ -22,7 +22,8 @@ public class PrimaryData {
                     data.add(new Data(line));
                 else if (line.matches("\\d+"))
                     count = Integer.parseInt(line);
-                else throw new CustomValidationException("First line can`t be parsed since it does not contain not only numbers.");
+                else
+                    throw new CustomValidationException("First line can`t be parsed since it does not contain not only numbers.");
             }
         } catch (IOException e) {
             e.printStackTrace();
